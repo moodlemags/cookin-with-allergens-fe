@@ -34,4 +34,8 @@ This is a very simple program at the outset where all it requires from the user 
 
 #### Favoriting Info:
 
-The user will be provided with an image, the recipe title and ingredients list for the recipe. If the user likes, the recipe can be saved to their favorite lists (or the user can see all favorites). If they click the favorite button, there are multiple follow up options. The user can email a grocery list of items and click the map to find local health food stores where one can purchase the ingredients themselves. 
+The user will be provided with an image, the recipe title and ingredients list for the recipe. If the user likes, the recipe can be saved to their favorite lists (or the user can see all favorites). If they click the favorite button, there are multiple follow up options. The user can email a grocery list of items and click the map to find local health food stores where one can purchase the ingredients themselves.
+
+#### Citation Info:
+
+I utilized outside code twice. The first was when I was trying to figure out a good way to format an if statement for ajax parameters, the syntax wasn't functional any time I did it myself so I turned to stack overflow and found a really nice format for the code which I utilized and cited in my JS. Additionally, for using mapbox they give you very thorough tutorials for how to embed the maps -- so my code ended up being a carbon copy of what the instructions tell you to do since it only works with their exact functions. I changed the style of the map and the JSON data and I'm excited to work on how to get the markers to work again
