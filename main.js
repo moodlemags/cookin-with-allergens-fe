@@ -114,11 +114,9 @@ document.getElementById('submitTest').addEventListener('click', function(event){
                           var liText = response[i].name;
                           var theLi = document.createElement('li');
                           theLi.appendChild(document.createTextNode(liText));
-                          faveRecipes.appendChild(theLi);
-                                                      }
+                          faveRecipes.appendChild(theLi);   }
 
-
-                            });
+                              }); // end done fxn
                           }); //end event listener
 
 
@@ -128,7 +126,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
         })//end event listener for click
 
           }); // end done function
-})//end event listener for click
+// })//end event listener for click
 
 //click fxn for add to favorites
 var favoriteButton = document.getElementById('favorite-recipe');
