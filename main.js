@@ -8,22 +8,22 @@ hidden.style.display = 'none';
 // var hiddenMap = document.getElementById('mapHide')
 // hiddenMap.style.displey = 'none';
 
-var emailtext = "";
-var emailListener = document.getElementById('emailtype');
-emailListener.addEventListener('keydown', function(event){
-      emailtext+= event.key;
-      console.log(emailtext);
+    var emailtext = "";
+    var emailListener = document.getElementById('emailtype');
+    emailListener.addEventListener('keydown', function(event){
+          emailtext+= event.key;
+          console.log(emailtext);
 
-      var submitEmail = document.getElementById('emailsubmit')
-      submitEmail.addEventListener('click', function(event){
-              // event.preventDefault();
-              console.log('clicked');
-              var recipeSending = document.getElementById('recipe-ingredients').innerText
-              submitEmail.setAttribute("href", "mailto:" + emailtext + "?body=The ingredients you need to buy are:  " + recipeSending )
-              console.log(submitEmail);
+          var submitEmail = document.getElementById('emailsubmit')
+          submitEmail.addEventListener('click', function(event){
+                  // event.preventDefault();
+                  console.log('clicked');
+                  var recipeSending = document.getElementById('recipe-ingredients').innerText
+                  submitEmail.setAttribute("href", "mailto:" + emailtext + "?body=The ingredients you need to buy are:  " + recipeSending )
+                  console.log(submitEmail);
 
-      }) // end submit emails
-    }) //end emailing self info
+          }) // end submit emails
+        }) //end emailing self info
 
 //submitButton for user recipe selections
 document.getElementById('submitTest').addEventListener('click', function(event){
@@ -68,8 +68,6 @@ document.getElementById('submitTest').addEventListener('click', function(event){
           var ingredientsTitle = document.getElementById('recipe-ingredients');
           var printIngredients = response.matches[0].ingredients;
           ingredientsTitle.innerHTML = printIngredients
-
-
 
 
           // WITHIN CLICK LISTENER FOR RECIPE SEARCH: ADDING FAVORITE BUTTONS
