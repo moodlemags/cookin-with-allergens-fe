@@ -69,7 +69,6 @@ document.getElementById('submitTest').addEventListener('click', function(event){
           var printIngredients = response.matches[0].ingredients;
           ingredientsTitle.innerHTML = printIngredients
 
-<<<<<<< HEAD
 
 
 
@@ -127,7 +126,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
               }); // end add click listener
           }); // end done function
         })//end event listener for click
-=======
+
           }); // end done function
 })//end event listener for click
 
@@ -151,4 +150,3 @@ favoriteButton.addEventListener('click', function(event) {
     //   console.log( "response: ", response );
     // }); // end AJAX
   }); // end Add Button listener
->>>>>>> gh-pages
