@@ -123,9 +123,6 @@ document.getElementById('submitTest').addEventListener('click', function(event){
           }); // end done function
         })//end event listener for click
 
-          // }); // end done function
-// })//end event listener for click
-
 //click fxn for add to favorites
 var favoriteButton = document.getElementById('favorite-recipe');
 console.log(favoriteButton);
