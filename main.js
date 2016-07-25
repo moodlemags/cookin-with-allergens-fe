@@ -5,6 +5,9 @@ var url = 'https://aqueous-river-80760.herokuapp.com'
 
 var hidden = document.getElementById('email-yourself')
 hidden.style.display = 'none';
+var body = document.getElementById('recipe-result');
+body.style.display = 'none';
+
 // var hiddenMap = document.getElementById('mapHide')
 // hiddenMap.style.displey = 'none';
 
@@ -60,6 +63,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
             console.log("response", response);
                   // printing name
           var body = document.getElementById('recipe-result');
+          body.style.display = 'block';
           var recipeTitle = response.matches[0].recipeName
           var appendTitle = document.getElementById('recipe-title').innerHTML = recipeTitle;
                   // printing image of recipe requested and ingredients list of receipe
