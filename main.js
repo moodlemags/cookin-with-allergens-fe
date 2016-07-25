@@ -18,8 +18,9 @@ hidden.style.display = 'none';
           submitEmail.addEventListener('click', function(event){
                   // event.preventDefault();
                   console.log('clicked');
+                  var emailBody = document.getElementById('emailbody')
                   var recipeSending = document.getElementById('recipe-ingredients').innerText
-                  submitEmail.setAttribute("href", "mailto:" + emailtext + "?body=The ingredients you need to buy are:  " + recipeSending )
+                  emailBody.setAttribute("href", "mailto:" + emailtext + "?body=The ingredients you need to buy are:  " + recipeSending )
                   console.log(submitEmail);
 
           }) // end submit emails
