@@ -7,6 +7,8 @@ var hidden = document.getElementById('email-yourself')
 hidden.style.display = 'none';
 var body = document.getElementById('recipe-result');
 body.style.display = 'none';
+var hiddenSearch = document.getElementsByClass('search-reveal');
+hiddenSearch.style.display = 'none';
 
 // var hiddenMap = document.getElementById('mapHide')
 // hiddenMap.style.displey = 'none';
@@ -102,6 +104,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
                 seeAll.addEventListener('click', function(event){
                       console.log('clicked see all');
                       console.log(recipeTitle);
+                      hiddenSearch.style.display = 'block';
 
                       $.ajax({
                         url: url + '/favorites',
@@ -120,7 +123,29 @@ document.getElementById('submitTest').addEventListener('click', function(event){
                           faveRecipes.appendChild(theLi);   }
 
                               }); // end done fxn
-                          }); //end event listener
+
+                          document.getElementById('find-favorite-recipes').addEventListener('click', function(event) {
+                              event.preventDefault();
+                              var searchRecipe = document.getElementById('input-box').value.toLowerCase();
+                                  console.log("locating: ", searchRecipe);
+                                  var data = {
+                                    name: searchRecipe
+                                  };
+                                  $.ajax({
+                                    url: url + '/favorites/' + searchRecipe,
+                                    method: 'get',
+                                    data: data,
+                                    dataType: 'json'
+                                  }).done(function(response){
+                                    if (response.length){
+                                      console.log(response);
+                                    } else {
+                                      console.log("none found");
+                                    }
+                                  }); // end ajax
+                                }); // end search name button listener
+
+                          }); //end see all click event listener
 
 
     //end fxns
