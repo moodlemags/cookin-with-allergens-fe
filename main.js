@@ -124,6 +124,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
 
                               }); // end done fxn
 
+                                //FIND ALL FAVES W/IN THE SEE ALL
                           document.getElementById('find-favorite-recipes').addEventListener('click', function(event) {
                               event.preventDefault();
                               var searchRecipe = document.getElementById('input-box').value;
@@ -147,6 +148,23 @@ document.getElementById('submitTest').addEventListener('click', function(event){
 
                           }); //end see all click event listener
 
+                          /* 'delete' button */
+                          document.getElementById('delete-favorite-recipes').addEventListener('click', function() {
+                            var deleteName = document.getElementById('input-box').value;
+                            console.log("deleting: ", deleteName);
+                            var data = {
+                              name: deleteName
+                            };
+                            $.ajax({
+                              url: url + '/favorites/' + deleteName,
+                              dataType: 'json',
+                              data: data,
+                              method: 'delete'
+                            }).done(function(response){
+                              console.log(deleteName + " has been deleted.");
+                              console.log(response);
+                            }); // end ajax
+                          }); // end delete button
 
     //end fxns
               }); // end add click listener
