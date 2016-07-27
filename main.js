@@ -169,7 +169,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
                           // UPDATE RECIPE TITLE
                         document.getElementById('update-favorite-recipes').addEventListener('click', function() {
                           var recipeChanging = document.getElementById('input-box').value;
-                          var newTitle = document.getElementById('new-update-name').value.toLowerCase();
+                          var newTitle = document.getElementById('new-name').value;
                                 var data = {
                                   name: recipeChanging,
                                   newTitle: newTitle
