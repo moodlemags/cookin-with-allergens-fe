@@ -126,7 +126,7 @@ document.getElementById('submitTest').addEventListener('click', function(event){
 
                           document.getElementById('find-favorite-recipes').addEventListener('click', function(event) {
                               event.preventDefault();
-                              var searchRecipe = document.getElementById('input-box').value.toLowerCase();
+                              var searchRecipe = document.getElementById('input-box').value;
                                   console.log("locating: ", searchRecipe);
                                   var data = {
                                     name: searchRecipe
