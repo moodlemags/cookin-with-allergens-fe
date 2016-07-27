@@ -7,7 +7,7 @@ var hidden = document.getElementById('email-yourself')
 hidden.style.display = 'none';
 var body = document.getElementById('recipe-result');
 body.style.display = 'none';
-var hiddenSearch = document.getElementsByClassName('search-reveal');
+var hiddenSearch = document.getElementById('search-reveal');
 hiddenSearch.style.display = 'none';
 
 // var hiddenMap = document.getElementById('mapHide')
