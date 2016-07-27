@@ -166,6 +166,25 @@ document.getElementById('submitTest').addEventListener('click', function(event){
                             }); // end ajax
                           }); // end delete button
 
+                          // UPDATE RECIPE TITLE
+                        document.getElementById('update-favorite-recipes').addEventListener('click', function() {
+                          var recipeChanging = document.getElementById('input-box').value;
+                          var newTitle = document.getElementById('new-update-name').value.toLowerCase();
+                                var data = {
+                                  name: recipeChanging,
+                                  newTitle: newTitle
+                                }
+                                $.ajax({
+                                  url: url + '/favorites/' + recipeChanging,
+                                  dataType: 'json',
+                                  method: 'put',
+                                  data: data
+                                }).done(function(response){
+                                  console.log(response);
+                                }); // end ajax
+
+                              }); // end update button
+
     //end fxns
               }); // end add click listener
           }); // end done function
